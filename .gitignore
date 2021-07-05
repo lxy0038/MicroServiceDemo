@@ -1,0 +1,17 @@
+*/obj 
+*/*/bin
+*/*/*/obj 
+*/*/obj 
+*/*/*/*/obj 
+*/*/*/*/*/obj 
+*/*/*/*/*/*/obj 
+*/obj/
+src/*/obj/
+.vs/
+*/logfile
+*/.vs/ 
+*/bin
+*/*/*/bin
+*/*/*/*/bin
+*/*/*/*/*/bin
+*/*/*/*/*/*/bin

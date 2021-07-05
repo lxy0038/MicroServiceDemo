@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+option csharp_namespace = "Mes.GrpcService";
+import "base.sys.proto";
+
+package grpcservice; 
+
+// The greeting service definition.
+service SysBaseDataService {
+  // Sends a greeting
+  rpc  GetEntityIds (GetEntityIdsRequest) returns (GetEntityIdsReply);
+  rpc  DatabaseMigrate (DatabaseMigrateRequest) returns (DatabaseMigrateReply);
+  rpc  HandleEntity (HandleEntityRequest) returns (HandleEntityReply);
+}
+
+
+
+// The request message containing the user's name.
+message GetEntityIdsRequest {
+   string entity_name=1;
+   int32 count=2;
+   string parent_id=3;
+   bool isOnlyOneAccess=4;
+}
+
+// The response message containing the greetings.
+message GetEntityIdsReply {    
+  repeated string ids=1;
+  repeated GrpcMessageReply messages=2;
+} 
+
+
+// The request message containing the user's name.
+message DatabaseMigrateRequest {
+   string begin_time=1;
+   string end_time=2; 
+}
+
+// The response message containing the greetings.
+message DatabaseMigrateReply {    
+  repeated GrpcMessageReply messages=1;
+} 
+
+
+// The request message containing the user's name.
+message HandleEntityRequest {
+   string data=1;
+   string entity_name=2; 
+   int32 type=3;
+}
+
+// The response message containing the greetings.
+message HandleEntityReply {    
+  string data=1;
+  repeated GrpcMessageReply messages=2;
+} 

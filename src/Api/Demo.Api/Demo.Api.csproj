@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.38.0" />
+    <PackageReference Include="NConsul.AspNetCore" Version="0.8.1" />
+  </ItemGroup> 
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.AspNetCore\Common.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\Demo.Models\Demo.Models.csproj" />
+  </ItemGroup>
+  <ItemGroup> 
+    <Protobuf Include="..\..\Protos\product.proto" GrpcServices="Client" link="Protos\product.proto" />
+    <Protobuf Include="..\..\Protos\sys.proto" GrpcServices="Client" link="Protos\sys.proto" />
+    <Protobuf Include="..\..\Protos\order.proto" GrpcServices="Client" link="Protos\order.proto" />
+  </ItemGroup>
+
+</Project>

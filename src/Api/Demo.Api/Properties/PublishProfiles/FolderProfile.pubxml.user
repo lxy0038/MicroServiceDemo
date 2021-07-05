@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\proj\MicroServiceDemo\src\Api\Demo.Api\bin\Release\net5.0\publish\</_PublishTargetUrl>
+    <History>True|2021-07-01T01:51:40.0592774Z;True|2021-07-01T09:24:56.3257528+08:00;True|2021-07-01T09:20:31.2812265+08:00;True|2021-06-30T17:16:40.6487996+08:00;True|2021-06-30T11:00:34.4485743+08:00;True|2021-06-30T09:42:18.7906670+08:00;</History>
+  </PropertyGroup>
+</Project>

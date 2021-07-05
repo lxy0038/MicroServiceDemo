@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option csharp_namespace = "Mes.GrpcService";
+import "sys.proto";
+
+package grpcservice;
+
+// The greeting service definition.
+service OrderDataService {
+  // Sends a greeting
+  rpc GetOrder  (GrpcRequest) returns (GrpcReply); 
+  rpc GetOrderByRequest  (GetOrderByRequestRequest) returns (GetOrderByRequestReply); 
+
+}
+  
+ // The request message containing the user's name.
+message GetOrderByRequestRequest {
+  string code = 1;
+  string id = 2;
+  string org_id=3;
+}
+
+// The response message containing the greetings.
+message GetOrderByRequestReply {  
+	message GetOrderProductByRequestReply {  
+		string code=1;
+		string name=2;
+		string org_id=3;
+		int32 product_type=4;
+	}
+	string code=1;
+	string name=2;
+	string org_id=3; 
+	GetOrderProductByRequestReply product=4;
+}

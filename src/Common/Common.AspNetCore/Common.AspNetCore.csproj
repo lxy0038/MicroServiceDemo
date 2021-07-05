@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup> 
+    <PackageReference Include="Consul" Version="1.6.10.1" />
+    <PackageReference Include="CSRedisCore" Version="3.6.6" />
+    <PackageReference Include="DotNetCore.CAP" Version="5.1.0" /> 
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="5.1.0" />
+    <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="5.1.0" /> 
+    <PackageReference Include="DotNetCore.CAP.MySql" Version="5.1.0" />
+    <PackageReference Include="DotNetCore.CAP.PostgreSql" Version="5.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.38.0" />
+    <PackageReference Include="NConsul.AspNetCore" Version="0.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interface\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+</Project>

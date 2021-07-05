@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+option csharp_namespace = "Mes.GrpcService";
+
+package grpcservice; 
+
+// The greeting service definition.
+service BaseSysDataService {
+  // Sends a greeting
+  rpc GetBaseUrl (GetBaseUrlRequest) returns (GetBaseUrlReply);
+  rpc GetOrgs (GetOrgsRequest) returns (GetOrgsReply);
+  rpc GetSerial (GetSerialRequest) returns (GetSerialReply);
+}
+// The request message containing the user's name.
+message GrpcMessageReply {
+  int32 message_type=1;
+  string code=2;
+  string message=3; 
+}
+
+message GetBaseUrlRequest{
+	string type=1;
+}
+ 
+message GetBaseUrlReply{
+  string url=1;
+  repeated GrpcMessageReply messages=2;
+}
+
+message GetOrgsRequest{
+	string type=1;
+}
+ 
+message GetOrgsReply{
+  message GetOrgsDetailReply{
+	string id=1;
+	string parent_id=2;
+	string code=3;
+	string name=4;
+  }
+  repeated GetOrgsDetailReply details=1;
+  repeated GrpcMessageReply messages=2;
+}
+
+message GetSerialRequest{
+	string type_code=1;
+	int32 count=2;
+}
+
+message GetSerialReply{
+  message GetSerialReply{
+	string code=1;
+  }
+  repeated GetSerialReply details=1;
+  repeated GrpcMessageReply messages=2;
+}
+
+
+// The request message containing the user's name.
+message GrpcRequest {
+   string data=1; 
+}
+
+// The response message containing the greetings.
+message GrpcReply {    
+  string data=1;
+  repeated GrpcMessageReply messages=2;
+} 
