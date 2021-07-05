@@ -84,18 +84,10 @@ namespace Common.AspNetCore
             var useNoStore = LibSysUtils.ToBoolean(this.configuration["MQ:UseNoStore"]);
             var dbConnStr= this.configuration["MQ:DbConnStr"];
            // var param = new LibContextAccessParamForDI();
-            if (!useNoStore&&string.IsNullOrEmpty(dbConnStr)) return;
-
-          //  services.TryAddSingleton<IDispatcher, CapCustomDispatcher>();
-          //  services.TryAddSingleton<IConsumerRegister, CapConsumerRegister>();
-          //  services.TryAddSingleton<ILibBusManager, LibRabbitBusManager>();
-
-           
+            if (!useNoStore&&string.IsNullOrEmpty(dbConnStr)) return; 
 
             services.AddCap(x =>
-            {
-                //x.UseEntityFramework<LibContextAccess>(t => t.Schema = "public");
-                //x.UseEntityFramework<lib>
+            { 
                 if (useNoStore)
                 {
                     x.UseNoStorage();
